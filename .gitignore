@@ -1,0 +1,12 @@
+# Ignore the Virtual Environment (Too big)
+venv/
+
+# Ignore Python cache files
+__pycache__/
+
+# Ignore Screenshots (Keep your repo clean)
+*.png
+*.jpg
+
+# Ignore Mac system files
+.DS_Store
