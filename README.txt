@@ -5,7 +5,14 @@ This bot will automatically check the City of Chicago website for parking/red li
 You do NOT need to know how to code to use this.
 
 ========================================================
-STEP 1: INSTALL PYTHON (You only need to do this once)
+STEP 1: INSTALL GOOGLE CHROME (Required)
+========================================================
+1. If you don't have it, download and install Google Chrome:
+   https://www.google.com/chrome/
+   (The bot uses your real Chrome browser to look like a human).
+
+========================================================
+STEP 2: INSTALL PYTHON
 ========================================================
 1. Go to https://www.python.org/downloads/
 2. Download the latest version for your computer.
@@ -15,7 +22,7 @@ STEP 1: INSTALL PYTHON (You only need to do this once)
    If you miss this, the bot will not work.
 
 ========================================================
-STEP 2: ADD YOUR CARS
+STEP 3: ADD YOUR CARS
 ========================================================
 1. Look for the file named "fleet.json" in this folder.
 2. Open it with any text editor (Notepad, TextEdit, etc.).
@@ -31,7 +38,7 @@ STEP 2: ADD YOUR CARS
    Make sure you keep the quotes "" and commas exactly as they are!
 
 ========================================================
-STEP 3: RUN THE BOT
+STEP 4: RUN THE BOT
 ========================================================
 1. Open the folder containing these files.
 
@@ -43,29 +50,48 @@ STEP 3: RUN THE BOT
 
 --- WHAT WILL HAPPEN ---
 1. A black window (Terminal) will open.
-2. The first time you run it, it might take 1-2 minutes to "Install Libraries" and "Check Browser Engine". This is normal.
-3. A Chrome browser will open and go to the Chicago website.
+2. The first time you run it, it might take 1-2 minutes to set up.
+3. A Chrome browser will open automatically.
 4. The bot will type the license plate for you.
 5. When the "I am not a robot" checkmark appears, use your mouse to click it and solve the puzzle.
 6. As soon as the green checkmark appears, let go of the mouse! 
    The bot will automatically click Search, take a screenshot of the results, and move to the next car.
 
 ========================================================
-TROUBLESHOOTING
+TROUBLESHOOTING (READ IF IT DOESN'T OPEN)
 ========================================================
 
-(MAC) "Permission Denied" or file won't open:
-1. Open your "Terminal" app (Command + Spacebar, type 'Terminal').
-2. Type: chmod +x 
-   (Make sure there is a space after the x).
-3. Drag the 'RunBot_Mac.command' file into the terminal window.
-4. Press Enter.
-5. Now try double-clicking the file again.
+(MAC) "File is damaged" or "Permission Denied":
+Apple security blocks downloaded scripts by default. Follow these steps to unlock it:
+
+1. Move this entire folder to your **Desktop**.
+2. Open the "Terminal" app on your Mac (Command+Space, type "Terminal").
+3. Type the following command and press Enter:
+   cd Desktop
+
+4. Type "cd " followed by the name of this folder. 
+   (Tip: Type "cd Chicago" and hit TAB to auto-complete the folder name).
+   Press Enter.
+
+5. Now type this EXACT command manually to unlock the file:
+   xattr -cr RunBot_Mac.command
+   (Press Enter)
+
+6. Type this EXACT command manually to make it runnable:
+   chmod +x RunBot_M
+   
+   IMPORTANT: Type the "_M" and THEN hit the TAB key. 
+   (If you don't type "M", the computer won't know if you mean Mac or Windows).
+   
+   It should auto-complete to: chmod +x RunBot_Mac.command
+   Press Enter.
+
+7. Close Terminal and double-click the file again. It will work now!
 
 (WINDOWS) "Windows protected your PC":
 1. Click "More Info".
 2. Click "Run Anyway".
 
 (ALL) The bot crashes immediately:
-1. Make sure you didn't delete a comma or quote in the fleet.json file.
-2. Make sure you installed Python.
+1. Make sure you have Google Chrome installed.
+2. Make sure you didn't delete a comma or quote in the fleet.json file.
